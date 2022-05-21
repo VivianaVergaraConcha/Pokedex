@@ -17,10 +17,9 @@ export default class ErrorBoundary extends React.Component {
     if (this.state.error) {
       return (
         <div>
-          <h2>Something went wrong.</h2>
+          <h2>Ups... Something went wrong :C</h2>
+          {this.state.error && this.state.error.toString()}
           <details style={{ whiteSpace: "pre-wrap" }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
             {this.state.errorInfo.componentStack}
           </details>
         </div>

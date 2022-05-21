@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { BrowserRouter, Switch, Route , Redirect} from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import PokedexContextProvider from "./contexts/PokedexContext";
 import PokemonContextProvider from "./contexts/PokemonContext";
@@ -19,9 +19,9 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Suspense fallback={<Loader />}>
-        <Switch>
-          <ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<Loader />}>
+          <Switch>
             <Route exact path="/">
               <PokedexContextProvider>
                 <Pokedex />
@@ -33,11 +33,10 @@ function App() {
               </PokemonContextProvider>
             </Route>
             <Route path="/404" component={NotFound} />
-            <Redirect exact={true} from="*" to="/404"/>
-          </ErrorBoundary>
-        </Switch>
-      </Suspense>
-
+            <Redirect exact={true} from="*" to="/404" />
+          </Switch>
+        </Suspense>
+      </ErrorBoundary>
       <Footer />
     </BrowserRouter>
   );
