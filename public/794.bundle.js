@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpokedex=self.webpackChunkpokedex||[]).push([[794],{62794:function(e,t,n){n.r(t),n.d(t,{default:function(){return c}});var u=n(67294),a=n(84240),f=n.p+"c6a444e1e5908fbb084d9472f7fd5a5b.jpg",c=function(){return u.createElement(a.Z,{title:"404",message:"Not Found",image:f})}}}]);
+//# sourceMappingURL=794.bundle.js.map
